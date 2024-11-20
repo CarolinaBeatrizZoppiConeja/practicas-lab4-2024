@@ -1,0 +1,11 @@
+
+<app-addtarea (emitirtarea)="agregarLista($event)"></app-addtarea>
+<p>listtarea works!</p>
+<section><ol>
+    @for (item of ListaTareas;track $index) {
+        <li>{{item.id}},{{item.tarea}}</li>
+        <a href="#"(click)="delete(tarea.id)">eliminar</a>
+        <a routerLink="['update',tarea.id]">actualizar</a>
+    }
+</ol></section>
+

@@ -1,0 +1,20 @@
+<p>addtarea works!</p>
+<section><fieldset><legend>
+    Alta tarea</legend>
+<form [formGroup]="formulario">
+<input type="text" formControlName="tarea" />
+@if (formulario.controls['tarea'].getError('minlength') && formulario.controls['tarea'].touched)
+{
+    <div class="error">campo requerido tiene que tener como minimo tres letras</div>
+}
+    <br />
+<label for="">id</label>
+<input type="number" formControlName="id"/>
+@if (formulario.controls['id'].getError('required') && formulario.controls['id'].touched)
+{
+<div class="error">campo requeido</div>
+}
+ 
+<button (click)="addTarea()">add</button>
+</form>
+</fieldset></section>

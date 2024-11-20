@@ -1,0 +1,15 @@
+<p>updatetarea works!</p>
+<p>holis</p>
+<fieldset>
+    <legend>update</legend>
+
+    <form [formGroup]="formulario" (ngSubmit)="update()">
+         
+        <label for="">id:</label>
+        <input type="text" id="id" formControlName="id">
+        <label for="" id="tarea">tarea</label>
+        <input type="text" id="tarea" formControlName="tarea">
+        <button type="submit">update</button>
+
+    </form>
+</fieldset>
