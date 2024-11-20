@@ -1,0 +1,13 @@
+<p>addtarea works!</p>
+<section><fieldset><legend>
+    Alta tarea</legend>
+<form action="">
+<label for="">tarea</label>
+<input type="text"[(ngModel)]="tarea.nombre"
+ [ngModelOptions]="{standalone:true}"/>
+<label for="">id</label>
+<input type="text"[(ngModel)]="tarea.id" 
+[ngModelOptions]="{standalone:true}"/>
+<button (click)="addTarea()">add</button>
+</form>
+</fieldset></section>
